@@ -7,7 +7,7 @@ const outputNotMessage = document.querySelector(".output__message");
 const outputImg = document.querySelector(".output__img");
 
 const encryptVocals = [
-  ["a", "atr"],
+  ["a", "ai"],
   ["e", "enter"],
   ["i", "imes"],
   ["o", "ober"],

@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: #fafafa;
+  line-height: 1.3;
+  font-family: "Roboto Slab", serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  width: 14rem;
+  margin: 0.4rem 0;
+  padding: 0.7rem 0;
+  text-decoration: inherit;
+  background: none;
+  color: black;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: box-shadow 400ms ease-in-out, color 400ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2px 2px #743ad5;
+  color: #fafafa;
+}
+
+.btn-copy {
+  margin-top: 2rem;
+}
+
+.btn-text {
+  color: #d53a9d;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(#743ad5, #d53a9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fafafa;
+}
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.gradient-purple-backgrund {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.main-layout {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 5px;
+  border-radius: 4px;
+  background: -webkit-linear-gradient(#743ad5, #d53a9d);
+  top: 9%;
+  left: 75%;
+}
+
+.input__text {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  width: 100%;
+  height: 22vh;
+  margin-top: 2.2rem;
+  color: #d53a9d;
+  padding: 1rem;
+}
+
+.input__text:focus {
+  outline: none;
+}
+
+.input__text::placeholder {
+  font-size: 1.1rem;
+  color: #d53a9d;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+.input-specification__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2rem 0 0.8rem;
+}
+
+.input-specification__logo {
+  width: 1.7rem;
+  margin-right: 0.5rem;
+}
+
+.input-specification__text {
+  color: #743ad5;
+}
+
+.input-btn__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input__divider {
+  display: flex;
+  justify-content: center;
+}
+
+.input__divider--line {
+  width: 50%;
+  margin-top: calc(2rem - 0.4rem);
+  border-top: solid 3px #d53a9d;
+  border-image-slice: 1;
+}
+
+.output__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  min-width: 40%;
+}
+
+.output__img {
+  width: 5rem;
+}
+
+.output__encrypted-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #d53a9d;
+}
+
+.output__message {
+  color: #d53a9d;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .main-layout {
+    margin: 1rem 7rem;
+  }
+
+  .input-btn__container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .title::before {
+    top: 8%;
+  }
+  .header {
+    font-size: 2rem;
+  }
+
+  .output__message {
+    font-size: 1.9rem;
+  }
+
+  .output__img {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 4rem;
+  }
+  .input__container {
+    min-width: 35rem;
+  }
+  .title::before {
+    display: none;
+  }
+  .input__text {
+    height: 70vh;
+    padding: 2rem;
+  }
+  .output__container {
+    height: 89.5vh;
+    padding: 2rem;
+  }
+
+  .output__img {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-layout {
+    justify-content: space-evenly;
+  }
+
+  .input__text {
+    height: 65vh;
+    padding: 2rem;
+  }
+
+  .title {
+    margin-top: 3rem;
+  }
+
+  .output__container {
+    max-width: 40%;
+  }
+
+  .output__img {
+    width: 12rem;
+  }
+}

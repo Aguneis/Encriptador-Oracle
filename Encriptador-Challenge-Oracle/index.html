@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&family=Josefin+Sans:wght@200;400;600&family=Lato:ital,wght@0,700;1,300;1,400&family=Montserrat:wght@700&family=Raleway:wght@200;400;700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Encriptador-Oracle</title>
+  </head>
+  <body>
+    <div class="main-layout">
+      <section class="input__container">
+        <header class="header">
+          <h1 class="title gradient-text">Encriptador Oracle</h1>
+        </header>
+        <textarea
+          id="input-text"
+          class="input__text"
+          name=""
+          rows="20"
+          placeholder="Ingrese el Texto Aqui"
+        ></textarea>
+        <div class="input-specification__container">
+          <img
+            class="input-specification__logo"
+            src="assets/advertencia.png"
+            alt="Advertencia"
+          />
+          <p class="input-specification__text">
+            Solo letras minúsculas y sin acentos
+          </p>
+        </div>
+        <div class="input-btn__container">
+          <button
+            id="btn-encrypt"
+            class="btn border-gradient gradient-purple-backgrund"
+          >
+            Encriptar
+          </button>
+          <button
+            id="btn-decrypt"
+            class="btn border-gradient border-gradient-purple btn-text"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <div class="input__divider">
+        <div class="input__divider--line"></div>
+      </div>
+      <section class="output__container border-gradient border-gradient-purple">
+        <img
+          class="output__img"
+          src="assets/imagen.png"
+          alt="imagen buscando"
+        />
+        <p id="output-text" class="output__encrypted-text"></p>
+        <p class="output__message hidden">Ningun mensaje fue encontrado</p>
+        <button
+          id="btn-copy"
+          class="btn btn-copy border-gradient gradient-purple-backgrund hidden"
+        >
+          Copiar
+        </button>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
